@@ -1,0 +1,61 @@
+/* Apply a custom font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+    background-color: #f4e8e8;
+    color: #333;
+}
+
+/* Style headings */
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+/* Image styling */
+img {
+    border: 3px solid #2c3e50;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #e11919;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1abc9c;
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 10px;
+}
+
+th {
+    background-color: #34495e;
+    color: #fff;
+}
+
+/* Alternate row background */
+tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+/* Remove default list style */
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
