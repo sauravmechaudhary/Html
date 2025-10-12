@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Job Application Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="form-container">
+    <h1>Job Application Form</h1>
+
+    <form action="/submit-form" method="post">
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+      </div>
+
+      <!-- Job Position -->
+      <div class="form-group">
+        <label for="position">Job Position</label>
+        <select id="position" name="position" required>
+          <option value="">-- Select a position --</option>
+          <option value="frontend">Frontend Developer</option>
+          <option value="backend">Backend Developer</option>
+          <option value="designer">Senior Developer</option>
+          <option value="pm">Web Developer</option>
+        </select>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="form-group form-full">
+        <label for="experience">Work Experience</label>
+        <textarea id="experience" name="experience" rows="5" placeholder="Describe your relevant work experience..."></textarea>
+      </div>
+
+      <!-- Terms and Conditions -->
+      <div class="form-group form-full checkbox-group">
+        <label>
+          <input type="checkbox" name="terms" required>
+          I agree to the terms and conditions
+        </label>
+      </div>
+
+      <!-- Buttons -->
+      <div class="form-buttons form-full">
+        <button type="submit" class="btn-submit">Submit</button>
+        <button type="reset" class="btn-reset">Reset</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fb;
+  margin: 0;
+  padding: 0;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Grid layout */
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+/* Form groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+.btn-reset {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.btn-reset:hover {
+  background-color: #c7c7c7;
+}
+
+/* Responsive layout */
+@media (min-width: 600px) {
+  form {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .form-full {
+    grid-column: 1 / span 2;
+  }
+}
