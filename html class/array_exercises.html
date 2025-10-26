@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Array Exercises</title>
+</head>
+<body>
+  <h1>JavaScript Array Exercises</h1>
+
+  <h2>1. Fruits and Vegetables Arrays</h2>
+  <script>
+    const fruits = ["apple", "banana", "orange", "grape", "kiwi"];
+    console.log("Fruits:", fruits);
+    console.log("Length of Fruits:", fruits.length);
+    console.log("Element at Index 2:", fruits[2]);
+    console.log("Last Element of Fruits:", fruits[fruits.length - 1]);
+
+```
+const vegetables = [];
+for (let i = 1; i <= 3; i++) {
+  const veg = prompt("Enter vegetable " + i + ":");
+  vegetables.push(veg);
+}
+console.log("Vegetables:", vegetables);
+console.log("Length of Vegetables:", vegetables.length);
+```
+
+  </script>
+
+  <h2>2. Array Operations (push, includes, pop, sort)</h2>
+  <script>
+    const numbers = [];
+    for (let i = 1; i <= 5; i++) {
+      let num = parseFloat(prompt("Enter number " + i + ":"));
+      numbers.push(num);
+    }
+    console.log("Numbers:", numbers);
+
+```
+let search = parseFloat(prompt("Enter a number to search:"));
+if (numbers.includes(search)) {
+  console.log("Number " + search + " is found in the array.");
+} else {
+  console.log("Number " + search + " is NOT found in the array.");
+}
+
+numbers.pop();
+console.log("Updated Numbers (after pop):", numbers);
+
+numbers.sort((a, b) => a - b);
+console.log("Sorted Numbers:", numbers);
+```
+
+  </script>
+
+  <h2>3. Even Numbers Extractor</h2>
+  <script>
+    const userNumbers = [];
+    while (true) {
+      let input = prompt("Enter a number (or 'done' to finish):");
+      if (input.toLowerCase() === "done") break;
+      userNumbers.push(parseFloat(input));
+    }
+
+```
+const evenNumbers = [];
+for (let num of userNumbers) {
+  if (num % 2 === 0) {
+    evenNumbers.push(num);
+  }
+}
+
+if (evenNumbers.length > 0) {
+  document.write("<p>Even Numbers: " + evenNumbers.join(", ") + "</p>");
+} else {
+  document.write("<p>Even Numbers: None</p>");
+}
+document.write("<p>End of program.</p>");
+```
+
+  </script>
+
+  <h2>4. sortArray Function (Ascending Only)</h2>
+  <script>
+    function sortArray(arr) {
+      return [...arr].sort((a, b) => a - b);
+    }
+
+```
+const arrExample = [5, 2, 9, 1, 7];
+console.log("Original Array:", arrExample);
+console.log("Sorted Array (Ascending):", sortArray(arrExample));
+```
+
+  </script>
+
+  <h2>5. sortArray Function (Ascending or Descending)</h2>
+  <script>
+    function sortArrayOrder(numbers, order) {
+      if (order === "asc") {
+        return [...numbers].sort((a, b) => a - b);
+      } else if (order === "desc") {
+        return [...numbers].sort((a, b) => b - a);
+      } else {
+        console.log("Invalid order specified. Use 'asc' or 'desc'.");
+        return numbers;
+      }
+    }
+
+```
+const nums = [5, 2, 8, 1, 9];
+console.log("Original Numbers:", nums);
+console.log("Ascending:", sortArrayOrder(nums, "asc"));
+console.log("Descending:", sortArrayOrder(nums, "desc"));
+```
+
+  </script>
+
+  <h2>6. Movie Ratings Tracker</h2>
+  <script>
+    const movies = [];
+    const movieCount = parseInt(prompt("How many movies do you want to rate?"));
+
+```
+for (let i = 1; i <= movieCount; i++) {
+  const title = prompt("Enter the title of movie " + i + ":");
+  const rating = parseFloat(prompt("Enter the rating (1–5) for " + title + ":"));
+  movies.push({ title: title, rating: rating });
+}
+
+movies.sort((a, b) => b.rating - a.rating);
+
+let output = "<h3>Sorted Movies by Rating (Highest to Lowest):</h3><ul>";
+for (let movie of movies) {
+  output += "<li>" + movie.title + " — Rating: " + movie.rating + "</li>";
+}
+output += "</ul>";
+
+const topMovie = movies[0];
+output += "<p><strong>Highest-Rated Movie:</strong> " + topMovie.title + " (Rating: " + topMovie.rating + ")</p>";
+
+document.write(output);
+```
+
+  </script>
+
+</body>
+</html>
